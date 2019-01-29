@@ -20,7 +20,6 @@ ThisBuild / licenses := List("Apache 2" -> new URL("http://www.apache.org/licens
 ThisBuild / homepage := Some(url("https://github.com/PatrykRudnicki/ValidationHelper"))
 
 ThisBuild / releasePublishArtifactsAction := PgpKeys.publishSigned.value
-ThisBuild / skip in publish := true
 
 ThisBuild / pomIncludeRepository := { _ => false }
 ThisBuild / publishTo := {
