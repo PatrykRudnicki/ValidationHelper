@@ -1,4 +1,5 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.patrykrudnicki/validation-helper_2.12.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.patrykrudnicki/validation-helper_2.12)
 
 ## Validation helper
 Helper to make your validation more readable and easier.
@@ -7,8 +8,16 @@ Helper to make your validation more readable and easier.
 This code is open source software licensed under the Apache 2.0 License
 
 ## Usage
+
+To use this library with sbt add the following code to your `plugins.sbt`
+
+```
+libraryDependencies += "io.github.patrykrudnicki" % "validation-helper_2.12" % "0.6.0"
+```
+
+## Motivation
 Validation helper gives you a possibility to validate elements with an easy and readable way.
-Basically, it implemented to use readable validation inside mapping for forms in Play Framework,
+Basically, it is implemented to use readable validation inside mapping for forms in Play Framework,
 but based on the implementation you can use it in different places.
 
 To represent logical `AND` and `OR` there are two generic methods that take function (`A => Boolean`) or `Boolean` and 
