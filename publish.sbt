@@ -19,7 +19,8 @@ ThisBuild / description := "Validation helper"
 ThisBuild / licenses := List("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 ThisBuild / homepage := Some(url("https://github.com/PatrykRudnicki/ValidationHelper"))
 
-// Remove all additional repository other than Maven Central from POM
+ThisBuild / releasePublishArtifactsAction := PgpKeys.publishSigned.value
+
 ThisBuild / pomIncludeRepository := { _ => false }
 ThisBuild / publishTo := {
   val nexus = "https://oss.sonatype.org/"
