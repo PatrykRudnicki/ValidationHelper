@@ -2,14 +2,14 @@
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.patrykrudnicki/validation-helper_2.12.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.patrykrudnicki/validation-helper_2.12)
 
 ## Validation helper
-Helper to make your validation more readable and easier.
+Helper to make your validation more readable and easier to use.
 
 ## License
 This code is open source software licensed under the Apache 2.0 License
 
 ## Usage
 
-To use this library with sbt add the following code to your `plugins.sbt`
+To use this library with sbt add the following code to your library dependencies.
 
 ```
 libraryDependencies += "io.github.patrykrudnicki" % "validation-helper_2.12" % "0.6.0"
