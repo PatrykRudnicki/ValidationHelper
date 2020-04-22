@@ -1,9 +1,9 @@
 package prudnicki.matchers
 
 trait StringValidator {
-  val isEmpty: String => Boolean = (input: String) => input.isEmpty
+  val isEmpty: String => Boolean = _.isEmpty
 
-  val nonEmpty: String => Boolean = (input: String) => input.nonEmpty
+  val nonEmpty: String => Boolean = _.nonEmpty
 
   val noLongerThan: Int => String => Boolean = (length: Int) => (input: String) => input.length <= length
 
@@ -11,17 +11,19 @@ trait StringValidator {
 
   val hasSpecificLength: Int => String => Boolean = (length: Int) => (input: String) => input.length == length
 
-  val startWithUppercase: String => Boolean = (input: String) => input.headOption.exists(_.isUpper)
+  val startWithUppercase: String => Boolean = _.headOption.exists(_.isUpper)
 
-  val startWithLowercase: String => Boolean = (input: String) => input.headOption.exists(_.isLower)
+  val startWithLowercase: String => Boolean = _.headOption.exists(_.isLower)
 
-  val startWithDigit: String => Boolean = (input: String) => input.headOption.exists(_.isDigit)
+  val startWithDigit: String => Boolean = _.headOption.exists(_.isDigit)
 
-  val isNumeric: String => Boolean = (input: String) => input.forall(_.isDigit)
+  val isNumeric: String => Boolean = _.forall(_.isDigit)
 
-  val isAlphabetic: String => Boolean = (input: String) => input.forall(_.isLetter)
+  val isAlphabetic: String => Boolean = _.forall(_.isLetter)
 
-  val isAlphanumeric: String => Boolean = (input: String) => input.forall(_.isLetterOrDigit)
+  val isAlphanumeric: String => Boolean = _.forall(_.isLetterOrDigit)
+
+  val isPalindrome: String => Boolean = (input: String) => input == input.reverse
 }
 
 object StringValidator extends StringValidator
